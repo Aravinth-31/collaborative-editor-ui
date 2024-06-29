@@ -1,0 +1,41 @@
+.Container {
+    padding: 40px 80px;
+}
+
+.SaveBtn {
+    border: none;
+    background: cornflowerblue;
+    color: white;
+    padding: 6px 22px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 200px;
+    margin-top: 20px;
+    float: right;
+    margin-right: 30px;
+}
+
+.ActionBtnGrp {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+.ActionBtn {
+    border-radius: 50%;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.TitleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

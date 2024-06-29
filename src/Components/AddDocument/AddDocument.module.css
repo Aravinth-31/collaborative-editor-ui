@@ -1,0 +1,35 @@
+.AddFormContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.AddForm {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    background: white;
+    padding: 30px 40px 40px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.AddForm input {
+    width: 100%;
+}
+
+.CreateBtn {
+    width: calc(100% + 12px);
+}
+
+.AddForm h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

@@ -28,10 +28,49 @@
   color: #61dafb;
 }
 
+input {
+  height: 48px;
+  width: 400px;
+  font-size: large;
+  border-radius: 8px;
+  border: 1px solid grey;
+  padding-left: 8px;
+  margin-bottom: 20px;
+}
+
+.primary-btn {
+  border: none;
+  background: cornflowerblue;
+  color: white;
+  padding: 12px 24px;
+  font-size: 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 412px;
+}
+
+.btn-secondary {
+  border: 1px solid cornflowerblue;
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  background: transparent;
+  font-weight: 700;
+  font-size: 18px;
+  color: cornflowerblue;
+  cursor: pointer;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
