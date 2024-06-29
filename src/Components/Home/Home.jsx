@@ -51,22 +51,34 @@ export default function Home({ }) {
                                     <TableCell align="right">Action</TableCell>
                                 </TableRow>
                             </TableHead>
-                            <TableBody>
-                                {documents.map((row) => (
-                                    <TableRow
-                                        key={row._id}
-                                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                    >
-                                        <TableCell component="th" scope="row">
-                                            {row.title}
-                                        </TableCell>
-                                        <TableCell className={styles.Content} align="right">{row.content || "-"}</TableCell>
-                                        <TableCell align="right">{new Date(row.createdAt).toDateString()}</TableCell>
-                                        <TableCell align="right">{new Date(row.updatedAt).toDateString()}</TableCell>
-                                        <TableCell align="right"><button className={`primary-btn ${styles.EditBtn}`} onClick={() => handleEdit(row)}>Edit</button></TableCell>
-                                    </TableRow>
-                                ))}
-                            </TableBody>
+                            {
+                                documents.length > 0 ?
+                                    <TableBody>
+                                        {documents.map((row) => (
+                                            <TableRow
+                                                key={row._id}
+                                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                            >
+                                                <TableCell component="th" scope="row">
+                                                    {row.title}
+                                                </TableCell>
+                                                <TableCell className={styles.Content} align="right">{row.content || "-"}</TableCell>
+                                                <TableCell align="right">{new Date(row.createdAt).toDateString()}</TableCell>
+                                                <TableCell align="right">{new Date(row.updatedAt).toDateString()}</TableCell>
+                                                <TableCell align="right"><button className={`primary-btn ${styles.EditBtn}`} onClick={() => handleEdit(row)}>Edit</button></TableCell>
+                                            </TableRow>
+                                        ))}
+                                    </TableBody> :
+                                    <TableBody>
+                                        <TableRow>
+                                            <TableCell colSpan={5}>
+                                                <div className={styles.NoDataContainer}>No Data</div>
+                                            </TableCell>
+                                        </TableRow>
+                                    </TableBody>
+                            }
+
+
                         </Table>
                     </TableContainer>
             }
